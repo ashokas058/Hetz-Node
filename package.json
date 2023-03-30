@@ -1,0 +1,25 @@
+{
+  "name": "hetz-node",
+  "version": "1.0.0",
+  "description": "building node controller- Containerization",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashokas058/Hetz-Node.git"
+  },
+  "keywords": [
+    "Hetz-Node"
+  ],
+  "author": "Ashok A S",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashokas058/Hetz-Node/issues"
+  },
+  "homepage": "https://github.com/ashokas058/Hetz-Node#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

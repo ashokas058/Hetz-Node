@@ -1,0 +1,19 @@
+version: '3.0'
+services:
+  nodeserver:
+    build: .
+    image: node_server:1.1
+    container_name: node_container
+    ports:
+      - 3007:3000
+    volumes:
+      - node_volume:/app
+    environment:
+      - NODE_PORT=3000
+  
+volumes:
+  node_volume:
+    driver: local
+ 
+  
+  
