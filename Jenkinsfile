@@ -6,7 +6,8 @@ pipeline{
     stage("init"){
 
         step{
-            cd /var/lib/jenkins/Hetz-Node
+            printf "$(pwd)"
+            cd /var/lib/jenkins/Hetz-NodeServer
             printf "changed jenkins workdir:- $(pwd)"
         }
     }
