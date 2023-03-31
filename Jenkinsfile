@@ -13,7 +13,7 @@ pipeline{
     }
     stage("Docker-Build"){
         step{
-            sudo docker build -t hetzserver:1.0 .
+            sh "sudo docker build -t hetzserver:1.0 ."
             printf "\$(sudo docker images ls|head -2)\n"
         }
     }
@@ -24,8 +24,8 @@ pipeline{
     }
     stage("Deploy"){
         step{
-            sudo fuser -k 80/tcp
-            sudo docker run -d -p 80:3000 hetzserver:1.0
+           sh " sudo fuser -k 80/tcp"
+            sh "sudo docker run -d -p 80:3000 hetzserver:1.0"
 
         }
     }
@@ -33,7 +33,7 @@ pipeline{
 }
 post{
     success{
-        docker logs $(docker ps | head -2|tail -1|awk ' {print $1} ')
+        sh "docker logs $(docker ps | head -2|tail -1|awk ' {print $1} ')"
     }
 }
 }
