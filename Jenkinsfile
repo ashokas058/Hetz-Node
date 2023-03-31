@@ -12,7 +12,7 @@ pipeline{
     }
     stage("Docker-Build"){
         steps{
-            sh "sudo docker build -t hetzserver:1.0 ."
+            sh "sudo docker build -t hetzserver:1.1 ."
             printf "\$(sudo docker images ls|head -2)\n"
         }
     }
