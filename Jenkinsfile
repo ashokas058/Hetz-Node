@@ -30,11 +30,7 @@ pipeline{
     }
     
 }
-post{
-    success{
-        sh "docker logs \$(docker ps | head -2|tail -1|awk ' {print \$1} ')"
-    }
-}
+
 }
 
 
