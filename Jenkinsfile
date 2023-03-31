@@ -24,7 +24,7 @@ pipeline{
     stage("Deploy"){
         steps{
           
-            sh "sudo docker run -d -p 3000:3000 hetzserver:1.0"
+            sh "sudo docker run -d -p 3000:3000 hetzserver:1.1"
 
         }
     }
