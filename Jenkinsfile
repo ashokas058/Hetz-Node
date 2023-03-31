@@ -18,13 +18,13 @@ pipeline{
     }
     stage("Listing All Images"){
         steps{
-            printf "\$(sudo docker images ls)\n"  
+            printf "\$( sudo docker images ls )\n"  
         }
     }
     stage("Deploy"){
         steps{
-           sh " sudo fuser -k 80/tcp"
-            sh "sudo docker run -d -p 80:3000 hetzserver:1.0"
+          
+            sh "sudo docker run -d -p 3000:3000 hetzserver:1.0"
 
         }
     }
