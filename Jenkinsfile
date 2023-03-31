@@ -8,18 +8,18 @@ pipeline{
         step{
             printf "\$(pwd)"
             cd /var/lib/jenkins/Hetz-NodeServer
-            printf "changed jenkins workdir:- $(pwd)"
+            printf "changed jenkins workdir:- \$(pwd)"
         }
     }
     stage("Docker-Build"){
         step{
             sudo docker build -t hetzserver:1.0 .
-            printf "$(sudo docker images ls|head -2)\n"
+            printf "\$(sudo docker images ls|head -2)\n"
         }
     }
     stage("Listing All Images"){
         step{
-            printf "$(sudo docker images ls)\n"  
+            printf "\$(sudo docker images ls)\n"  
         }
     }
     stage("Deploy"){
@@ -37,4 +37,6 @@ post{
     }
 }
 }
+
+
 
