@@ -102,7 +102,7 @@ resource "aws_network_interface" "nw_nqueens" {
 
   subnet_id = aws_subnet.pub_subnet_a.id
   security_groups=[aws_security_group.pub_secgroup.id]
-  private_ips = ["10.0.1.23"]
+  private_ips = ["10.0.2.22"]
   
 }
 resource "aws_eip" "pub_ip_nqueens" {
